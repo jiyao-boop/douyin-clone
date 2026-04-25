@@ -25,11 +25,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "craco start",
-  "build": "CI=false craco build", // 关键！加了 CI=false
-  "test": "craco test",
-  "eject": "react-scripts eject"
-},
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
