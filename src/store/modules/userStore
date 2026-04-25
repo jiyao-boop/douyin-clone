@@ -1,0 +1,22 @@
+// src/store/userSlice.js
+import { createSlice } from '@reduxjs/toolkit'
+
+const userSlice = createSlice({
+    name: 'user',
+    initialState: {
+        currentUser: null // 动态存当前登录的用户，谁登录就存谁
+    },
+    reducers: {
+        // 登录成功：存入当前用户信息
+        setCurrentUser: (state, action) => {
+            state.currentUser = action.payload
+        },
+        // 退出登录：清空用户信息
+        clearCurrentUser: (state) => {
+            state.currentUser = null
+        }
+    }
+})
+
+export const { setCurrentUser, clearCurrentUser } = userSlice.actions
+export default userSlice.reducer

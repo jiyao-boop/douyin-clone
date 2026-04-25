@@ -1,0 +1,118 @@
+body {
+  position: relative;
+  div {
+    color: rgb(0, 0, 0);
+  }
+   .rv-form{
+    margin-top: 30vh;
+  .rv-cell.rv-cell--required.rv-field.rv-form-item{
+    margin: 0px 0px 20px 20px;
+    width: 80vw;
+  }
+    rv-button.rv-button--primary.rv-button--normal.rv-button--block.rv-button--round{
+      width: 80vw;
+    }
+}
+.rv-button__text{
+  color: aliceblue;
+  font-size: 16px;
+}
+.register{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 70vw;
+ color: rgb(23, 26, 187);
+}
+.login {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 70vw;
+  color: rgb(23, 91, 187);
+}
+  .rv-space {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 3vw;
+   top: 73vw;
+  
+    
+    .rv-space__item {
+      svg {
+        color: rgb(179, 179, 179);
+        font-size: 10vw;
+      }
+             &:nth-child(1) {
+              svg{
+                font-size: 15vw;
+              }
+               margin-bottom: 5vw;
+             }
+      &:nth-child(2) {
+        // Like 心图标
+        margin-bottom: 5vw;
+      }
+      
+      &:nth-child(3) {
+        // Chat 聊天图标
+        margin-bottom: 5vw;
+      }
+      
+      &:nth-child(4) {
+        // Star 星图标
+        margin-bottom: 5vw;
+      }
+             &:nth-child(5) {
+               // 转发
+               margin-bottom: 5vw;
+             }
+             &:nth-child(6) {
+
+               svg {
+                 font-size: 13vw;
+               }
+             }
+    }
+  }
+
+}
+.demo-button {
+  .rv-button {
+    margin:0;
+  }
+
+  .rv-button-group {
+    .rv-button {
+      margin: 0;
+    }
+  }
+}
+// 双击点赞心形动画
+@keyframes heartBeat {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  15% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
