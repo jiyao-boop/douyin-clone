@@ -401,7 +401,7 @@ const Home = () => {
                                                 {item.likeCount ?? 0}
                                             </div>
 
-                                            {/* ✅ 自己发的评论才显示删除按钮 */}
+
                                             {currentUser && item.userId === currentUser.id && (
                                                 <div
                                                     onClick={(e) => { e.stopPropagation(); handleDeleteComment(item.id) }}

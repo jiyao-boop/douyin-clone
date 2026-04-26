@@ -61,7 +61,7 @@ export const {
 export const getVideoList = () => {
     return async (dispatch) => {
         try {
-            const res = await axios.get('http://localhost:8888/videos')
+            const res = await axios.get('/videos')
             const videosWithDefaults = res.data.map(video => ({
                 ...video,
                 isLike: false,

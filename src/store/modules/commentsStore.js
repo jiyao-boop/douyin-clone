@@ -52,8 +52,8 @@ const { setCommentsList, setaddComments, setDeleteComments, setLikeComment } = c
 export const getsetCommentsList = (videoId) => {
     return async (dispatch) => {
         const [commentsRes, usersRes] = await Promise.all([
-            axios.get(`http://localhost:8888/comments?videoId=${videoId}`),
-            axios.get('http://localhost:8888/users')
+            axios.get(`/comments?videoId=${videoId}`),
+            axios.get(`/users`)
         ])
 
         const comments = commentsRes.data
@@ -97,7 +97,7 @@ export const getsetCommentsList = (videoId) => {
 // 发布评论/回复通用接口
 export const getsetaddComments = (commentData) => {
     return async (dispatch) => {
-        const res = await axios.post('http://localhost:8888/comments', {
+        const res = await axios.post('/comments', {
             parentId: commentData.parentId || 0,
             likeCount: 0,
             ...commentData
@@ -109,7 +109,7 @@ export const getsetaddComments = (commentData) => {
 
 export const getsetDeleteComments = (id) => {
     return async (dispatch) => {
-        await axios.delete(`http://localhost:8888/comments/${id}`)
+        await axios.delete(`/comments/${id}`)
         dispatch(setDeleteComments(id))
     }
 }
@@ -119,7 +119,7 @@ export const getsetLikeComment = (commentId, isLike) => {
     return async (dispatch) => {
         try {
             // 更新后端数据 - 修复：不使用字符串，直接更新状态
-            await axios.patch(`http://localhost:8888/comments/${commentId}`, {
+            await axios.patch(`/comments/${commentId}`, {
                 isLike: isLike
             })
             // 更新前端状态

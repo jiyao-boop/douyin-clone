@@ -20,7 +20,7 @@ export const { setUserList } = userAvatarStore.actions
 // 获取用户列表
 export const getsetUserList = () => {
     return async (dispatch) => {
-        const res = await axios.get('http://localhost:8888/users')
+        const res = await axios.get('/users')
         dispatch(setUserList(res.data))
     }
 }
@@ -28,7 +28,7 @@ export const getsetUserList = () => {
 // 根据用户ID获取用户信息
 export const getsetUserById = (userId) => {
     return async (dispatch) => {
-        const res = await axios.get(`http://localhost:8888/users/${userId}`)
+        const res = await axios.get(`/users/${userId}`)
         // 这里可以添加处理单个用户的逻辑
         console.log('获取到的用户信息:', res.data)
     }
